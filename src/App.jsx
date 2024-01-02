@@ -1,3 +1,7 @@
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Home from "./pages/Home";
+import About from "./pages/About";
+
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import { css } from "@emotion/css";
@@ -9,24 +13,17 @@ const theme = createTheme({
   },
 });
 
-const color = "white";
+const router = createBrowserRouter([
+  { path: "/", element: <Home /> },
+  { path: "/about", element: <About /> },
+]);
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <div
-        className={css`
-          padding: 32px;
-          background-color: hotpink;
-          font-size: 24px;
-          border-radius: 4px;
-          &:hover {
-            color: ${color};
-          }
-        `}
-      >
-        Hover to change color.
+      <div>
+        <RouterProvider router={router} />
       </div>
     </ThemeProvider>
   );
