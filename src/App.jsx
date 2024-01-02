@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import MasterLayout from "./Layout/MasterLayout";
 import Home from "./pages/Home";
 import About from "./pages/About";
+import ErrorPage from "./pages/Error";
 
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -21,7 +22,8 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <Home /> },
       { path: "/about", element: <About /> }
-    ]
+    ],
+    errorElement: <ErrorPage />
   },
   
 ]);
