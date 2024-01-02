@@ -1,10 +1,11 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import MasterLayout from "./Layout/MasterLayout";
 import Home from "./pages/Home";
 import About from "./pages/About";
 
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
-import { css } from "@emotion/css";
+//import { css } from "@emotion/css";
 import "./sass/app.scss";
 
 const theme = createTheme({
@@ -14,15 +15,22 @@ const theme = createTheme({
 });
 
 const router = createBrowserRouter([
-  { path: "/", element: <Home /> },
-  { path: "/about", element: <About /> },
+  {
+    path: '/',
+    element: <MasterLayout />,
+    children: [
+      { path: "/", element: <Home /> },
+      { path: "/about", element: <About /> }
+    ]
+  },
+  
 ]);
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <div>
+      <div>        
         <RouterProvider router={router} />
       </div>
     </ThemeProvider>
