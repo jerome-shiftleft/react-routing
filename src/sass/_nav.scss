@@ -1,0 +1,11 @@
+#main-nav {
+  .nav-links {
+    > a {
+      &:hover,
+      &.active {
+        color: #000;
+        font-weight: 700;
+      }
+    }
+  }
+}
