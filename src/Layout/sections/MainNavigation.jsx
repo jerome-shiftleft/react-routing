@@ -6,7 +6,7 @@ function MainNavigation() {
     <>
       <header>
         <nav>
-          <Stack direction="row" spacing={2}>
+          <Stack direction="row" spacing={3}>
             <Link to="/">Home</Link>
             <Link to="/About">About</Link>
           </Stack>
