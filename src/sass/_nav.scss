@@ -1,6 +1,7 @@
 #main-nav {
   .nav-links {
     > a {
+      color: $default-font-color;
       &:hover,
       &.active {
         color: #000;

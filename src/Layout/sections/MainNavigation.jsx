@@ -8,7 +8,8 @@ function MainNavigation() {
         <nav id="main-nav">
           <Stack className="nav-links" direction="row" spacing={3}>
             <NavLink to="/">Home</NavLink>
-            <NavLink to="/About">About</NavLink>
+            <NavLink to="/about">About</NavLink>
+            <NavLink to="/products">Products</NavLink>
           </Stack>
         </nav>
       </header>
